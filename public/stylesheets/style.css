@@ -28,8 +28,15 @@ a {
 }
 
 .cinema-list {
-  background-color: darkblue;
   color: whitesmoke;
-  display: flexbox;
-  justify-content: space-evenly;
+  margin-left: 650px;
+}
+
+.card-body {
+  background-color: lightgray;
+  border-radius: 15px;
+}
+
+.title-text {
+  color: darkblue;
 }

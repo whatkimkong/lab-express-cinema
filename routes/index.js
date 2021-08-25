@@ -7,19 +7,20 @@ router.get('/', (req, res, next) => res.render('index'));
 
 
 /* GET /movies route */
-router.get('/', (req, res, next) => {
+router.get('/movies', (req, res, next) => {
     MovieModel.find()
     .then((movies) => {
-        console.log(movies);
         res.render('movies', {movies})
     })
     .catch ((err) => console.log(err))
 });
 
-router.get('/movies', (req, res, next) => {
-    MovieModel.find()
+router.get('/movies/:id', (req, res, next) => {
+    const { id } = req.params;
+    MovieModel.findById(id)
     .then((movies) => {
-        res.redirect('/movies/details', {movies})
+        console.log(movies);
+        res.render('movies/details', {movies} )
     })
     .catch((err) => console.log(err))
 })
