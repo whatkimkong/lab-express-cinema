@@ -1,0 +1,13 @@
+<div class="cinema-list">
+    <div class="card" style="width: 18rem;">
+        {{#each movies}}
+        <img class="card-img-top" src="{{this.image}}" alt="Card image cap">
+        <div class="card-body">
+        <p class="card-text">{{this.title}}</p>
+        <button type="button" class="btn btn-outline-info" href="#">See more</button>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+<h1> Ironhack Cinema </h1>
