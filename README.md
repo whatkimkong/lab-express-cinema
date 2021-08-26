@@ -195,3 +195,11 @@ That's it!
 <br>
 
 **Happy coding!** :heart:
+
+
+
+
+NOTES
+
+css - display:block is by default > if you want the h tags to be on the same line then you need to set them to display:inline
+BUT better to use <p> with different classes to style different parts of the same text.

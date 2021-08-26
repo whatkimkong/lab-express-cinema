@@ -15,16 +15,14 @@ router.get('/movies', (req, res, next) => {
     .catch ((err) => console.log(err))
 });
 
-router.get('/movies/:id', (req, res, next) => {
+router.get('/movies/:id/details', (req, res, next) => {
     const { id } = req.params;
     MovieModel.findById(id)
-    .then((movies) => {
-        console.log(movies);
-        res.render('movies/details', {movies} )
+    .then((movie) => {
+        // console.log(movie);
+        res.render('movies/details', {movie} )
     })
     .catch((err) => console.log(err))
 })
-
-
 
 module.exports = router;
